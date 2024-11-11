@@ -1,0 +1,51 @@
+﻿@model IEnumerable<StatusTurbo.Models.Tarefa>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo", "Criar")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DescricaoTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataTarefa)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DescricaoTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataTarefa)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IdUsuario)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Editar", new { id=item.IdTarefa }) |
+            @Html.ActionLink("Detalhes", "Detalhes", new { id=item.IdTarefa }) |
+            @Html.ActionLink("Deletar", "Deletar", new { id=item.IdTarefa })
+        </td>
+    </tr>
+}
+
+</table>

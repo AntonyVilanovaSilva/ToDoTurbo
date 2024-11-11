@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="StatusTurboModel2StoreContainer" CdmEntityContainer="StatusTurboEntities3">
+    <EntitySetMapping Name="Tarefa">
+      <EntityTypeMapping TypeName="StatusTurboModel2.Tarefa">
+        <MappingFragment StoreEntitySet="Tarefa">
+          <ScalarProperty Name="IdTarefa" ColumnName="IdTarefa" />
+          <ScalarProperty Name="DescricaoTarefa" ColumnName="DescricaoTarefa" />
+          <ScalarProperty Name="DataTarefa" ColumnName="DataTarefa" />
+          <ScalarProperty Name="IdStatus" ColumnName="IdStatus" />
+          <ScalarProperty Name="IdUsuario" ColumnName="IdUsuario" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,50 @@
+﻿@model StatusTurbo.Models.Tarefa
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Tarefa</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataTarefa)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataTarefa)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IdUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IdUsuario)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.IdTarefa }) |
+    @Html.ActionLink("Voltar para a Lista", "Index")
+</p>

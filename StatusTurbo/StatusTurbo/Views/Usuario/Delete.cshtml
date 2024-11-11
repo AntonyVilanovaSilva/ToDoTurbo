@@ -1,0 +1,40 @@
+﻿@model StatusTurbo.Models.Usuario
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Deletar</h2>
+
+<h3>Você realmente quer apagar isto?</h3>
+<div>
+    <h4>Usuario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoginUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoginUsuario)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SenhaUsuario)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SenhaUsuario)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar para a Lista", "Index")
+        </div>
+    }
+</div>

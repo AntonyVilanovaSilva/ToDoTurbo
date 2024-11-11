@@ -1,0 +1,26 @@
+﻿@model StatusTurbo.Models.TarefaStatus
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>TarefaStatus</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DescricaoStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DescricaoStatus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Editar", new { id = Model.IdStatus }) |
+    @Html.ActionLink("Voltar para a Lista", "Index")
+</p>

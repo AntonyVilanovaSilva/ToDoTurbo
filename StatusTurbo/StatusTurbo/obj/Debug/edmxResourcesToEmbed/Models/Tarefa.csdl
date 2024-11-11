@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="StatusTurboModel2" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tarefa">
+    <Key>
+      <PropertyRef Name="IdTarefa" />
+    </Key>
+    <Property Name="IdTarefa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DescricaoTarefa" Type="String" MaxLength="250" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataTarefa" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="IdStatus" Type="Int32" />
+    <Property Name="IdUsuario" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="StatusTurboEntities3" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tarefa" EntityType="Self.Tarefa" />
+  </EntityContainer>
+</Schema>
